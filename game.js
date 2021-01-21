@@ -3,6 +3,7 @@ const choices = Array.from(document.getElementsByClassName('choice-text'));
 const progressText = document.getElementById('progressText');
 const scoreText = document.getElementById('score')
 const progressBarFull = document.getElementById('progressBarFull')
+const username = document.getElementById('username');
 console.log(choices)
 
 // Variables
@@ -12,6 +13,29 @@ let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
+
+// Timer 
+var time = 10
+var timer = document.getElementById('time')
+
+getTime = () => {
+
+
+time--
+console.log(time)
+timer.textContent = time
+if( time <= 0) {
+
+    return window.location.assign('end.html');
+
+
+}
+
+}
+
+setInterval(getTime, 1000)
+
+// Questions Array
 
 let questions = [
     {
@@ -56,16 +80,19 @@ startGame = () => {
     getNewQuestion();
 };
 
+
 getNewQuestion = () => {
 
-    if(availableQuestions.length === 0 || questionCounter > Max_Questions) {
-
+    if(availableQuestions.length === 0 || questionCounter >= Max_Questions || time === 0) {
         localStorage.setItem('mostRecentScore', score)
-    }
+
+
 
     // Go to The End Page
 
     return window.location.assign('end.html');
+
+    }
 
     questionCounter++;
     progressText.innerText = questionCounter + "/" + Max_Questions;
@@ -107,7 +134,10 @@ choices.forEach(choice => {
         if(classToApply === 'correct') {
             incrementScore(Correct_Bonus);
         }
-
+        
+        if(classToApply === 'incorrect') {
+            time -= 5
+        }
 
 
         selectedChoice.parentElement.classList.add(classToApply);
