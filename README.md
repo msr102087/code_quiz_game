@@ -24,6 +24,15 @@ When the quiz is finished, the user is presented with the option to save their s
 
 The top 3 high user scores are saved and put into a list on the High Scores page.
 
+## Updates and Edits
+
+To make updates and edit this quiz you will need the following:
+
+- A text editor, such as, Visual Studio Code
+- To download the zip file for the quiz, or follow GitHub's standard to clone the files to your local machine
+
+
+
 ## Deploy Quiz
 
 You can view the quiz at the following link:  https://msr102087.github.io/code_quiz_game/
