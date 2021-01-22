@@ -1,12 +1,15 @@
-const question = document.getElementById('question');
-const choices = Array.from(document.getElementsByClassName('choice-text'));
-const progressText = document.getElementById('progressText');
-const scoreText = document.getElementById('score')
-const progressBarFull = document.getElementById('progressBarFull')
-const username = document.getElementById('username');
-console.log(choices)
 
 // Variables
+
+var question = document.getElementById('question');
+var choices = Array.from(document.getElementsByClassName('choice-text'));
+var progressText = document.getElementById('progressText');
+var scoreText = document.getElementById('score')
+var progressBarFull = document.getElementById('progressBarFull')
+var username = document.getElementById('username');
+console.log(choices)
+
+// Changing Variables
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -15,7 +18,7 @@ let questionCounter = 0;
 let availableQuestions = [];
 
 // Timer 
-var time = 10
+var time = 60
 var timer = document.getElementById('time')
 
 getTime = () => {
@@ -63,14 +66,33 @@ let questions = [
         choice4: "alert('Hello World');",
         answer: 4,
     },
+    {
+        question: "Finding and fixing code problems is known as...",
+        choice1: "coding;",
+        choice2: "programming;",
+        choice3: "debugging;",
+        choice4: "scrubbing;",
+        answer: 3,
+    },
+
+    {
+        question: "Which of the following is NOT part of the HTML DOM",
+        choice1: "HTML elements as objects;",
+        choice2: "Properties of all HTML elements;",
+        choice3: "Styling of all HTML elements;",
+        choice4: "Methods to access all HTML elements",
+        answer: 3,
+    },
+
 ];
 
 
 // Constants
 
 const Correct_Bonus = 10;
-const Max_Questions = 3;
+const Max_Questions = 5;
 
+// Start of Game Generate Questions
 
 startGame = () => {
     questionCounter = 0;
@@ -151,10 +173,14 @@ choices.forEach(choice => {
 })
 
 
+
 incrementScore = num => {
     score += num;
     scoreText.innerText = score;
 
 }
+
+
+// Calls Game to Start
 
 startGame();
