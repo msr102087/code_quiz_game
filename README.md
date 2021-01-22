@@ -26,7 +26,7 @@ The top 3 high user scores are saved and put into a list on the High Scores page
 
 ## Deploy Quiz
 
-You can view the quiz at the following link:  
+You can view the quiz at the following link:  https://msr102087.github.io/code_quiz_game/
 
 ## Project Challenges
 
