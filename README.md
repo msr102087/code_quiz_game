@@ -24,6 +24,10 @@ When the quiz is finished, the user is presented with the option to save their s
 
 The top 3 high user scores are saved and put into a list on the High Scores page.
 
+## Deploy Quiz
+
+You can view the quiz at the following link:  
+
 ## Project Challenges
 
 I found this project particularly challenging because a lot of the criteria was structured into HTML but modified using JavaScript.  Other challenges included learning how to store criteria into local storage and calling functions.
