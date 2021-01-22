@@ -18,7 +18,7 @@ If the user gets a question wrong, the time is shortened by 10 seconds, and then
 
 <img width="820" alt="Screen Shot 2021-01-21 at 4 50 55 PM" src="https://user-images.githubusercontent.com/74628028/105430649-da7c3900-5c08-11eb-86eb-3c57ea39031f.png">
 
-When the quiz is finished, the user is presented with the option to save their score, replay the game, or go to the home page.  Saving the score is then saved onto local storage and generated into the high scores list if it qualifies.  
+When the quiz is finished, the user is presented with the option to save their score, replay the game, or go to the home page.  Saving the score is then saved onto local storage and generated into the high scores list if it qualifies.  The final score saved in high scores is the amount of time the user took to complete the quiz pluse the points they acquired.
 
 <img width="820" alt="Screen Shot 2021-01-21 at 4 52 44 PM" src="https://user-images.githubusercontent.com/74628028/105430758-1c0ce400-5c09-11eb-8ecc-8085703c19b7.png">
 
